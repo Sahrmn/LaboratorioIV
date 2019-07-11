@@ -29,11 +29,6 @@ export class FirebaseService {
   logOut(){
   	this.fauth.auth.signOut();
   }
-  /*
-  getProfesores() {
-    return this.db.collection('profesores').snapshotChanges();
-  }
-  */
 
   guardarMateria(data) {
     return this.db.collection('materias').add(data);

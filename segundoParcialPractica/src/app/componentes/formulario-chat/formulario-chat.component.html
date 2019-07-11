@@ -1,3 +1,2 @@
-<p>
-  formulario-chat works!
-</p>
+<input type="text" [(ngModel)]="mensaje" (keydown)="onKeydown($event)">
+<button type="submit" class="btn btn-dark" (click)=enviar()>Enviar</button>

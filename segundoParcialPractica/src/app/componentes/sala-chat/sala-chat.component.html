@@ -1,3 +1,21 @@
-<p>
-  sala-chat works!
-</p>
+<app-menu></app-menu>
+
+<section class="bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-white">Chat</h2>
+      <hr class="star-light mb-5">
+      <div class="row">
+      	<div class="col align-self-center text-center">
+			<div class="mainContent">
+			  <div #scroller class="feedWrapper">
+			    <app-mensaje></app-mensaje>
+			  </div>
+			</div>
+
+			<div class="chatFormWrapper">
+			  <app-formulario-chat></app-formulario-chat>
+			</div>
+      	</div>
+      </div>
+    </div>
+</section>

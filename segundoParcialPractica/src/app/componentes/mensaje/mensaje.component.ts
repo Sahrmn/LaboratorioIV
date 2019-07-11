@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Mensaje } from '../../clases/mensaje';
+import { ChatService } from '../../servicios/chat.service';
 
 @Component({
   selector: 'app-mensaje',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MensajeComponent implements OnInit {
 
-  constructor() { }
+  lista: Mensaje[] = [];
+
+  constructor(private chatService: ChatService) { }
 
   ngOnInit() {
+  	this.traerMensajes();
   }
+
+  traerMensajes(){
+  	this.chatService.getMensajes().subscribe(response => {
+      this.lista = response.map(item=>{
+        return item.payload.doc.data() 
+      })
+	});
+  }
+
+  ngOnChanges(){
+    this.chatService.getMensajes().subscribe(response=>{
+      this.lista = response.map(item=>{
+        return{
+          mensaje: item.payload.doc.data()
+        } as Mensaje;
+      })
+    })
+  }
+
+  
 
 }

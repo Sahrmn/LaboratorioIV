@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
           let datos = {
             'nombre': data.payload.doc.data().nombre,
             'apellido': data.payload.doc.data().apellido,
-            'email': this.email
+            'email': this.email,
+            'tipo': data.payload.doc.data().tipo
           }
           localStorage.setItem('usuario', JSON.stringify(datos));
           
@@ -91,6 +92,21 @@ export class LoginComponent implements OnInit {
     setTimeout(function(){
       $('#alert-2').fadeOut();
     }, 3000);
+  }
+
+  entrarAlumno(){
+    this.email = "prueba1@gmail.com";
+    this.pass = "prueba1";
+  }
+
+  entrarProfesor(){
+    this.email = "profesor@gmail.com";
+    this.pass = "profesor";
+  }
+
+  entrarAdmin(){
+    this.email = "admin@gmail.com";
+    this.pass = "admin1";
   }
 
 }

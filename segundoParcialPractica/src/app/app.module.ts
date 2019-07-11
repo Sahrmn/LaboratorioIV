@@ -46,7 +46,6 @@ import { FormularioChatComponent } from './componentes/formulario-chat/formulari
     ListaInscripcionesComponent,
     HomeProfesorComponent,
     AlumnosMateriaComponent,
-    SaltaChatComponent,
     SalaChatComponent,
     MensajeComponent,
     FormularioChatComponent,
