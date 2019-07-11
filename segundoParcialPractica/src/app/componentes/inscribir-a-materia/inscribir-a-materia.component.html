@@ -1,0 +1,33 @@
+<section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Inscripcion a Materias</h2>
+      <hr class="star-dark mb-5">
+      <div class="row">
+        <table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Cuatrimestre</th>
+		      <th scope="col">Profesor</th>
+		      <th></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr *ngFor="let item of materias" [ngClass]="{'azulcito': item.cupo>10, 'rojito': item.cupo<=10}">
+		      <td>{{item.nombre}}</td>
+		      <td>{{item.cuatrimestre}}</td>
+		      <td>{{item.nombreProfesor}} {{item.apellidoProfesor}}</td>
+		      <td><button class="btn btn-dark" (click)="inscripcion(item)">Inscribirse</button></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<div id="alert-1" class="alert alert-danger ocultar" data-dismiss="alert" role="alert">
+	      {{text}}
+	    </div>
+
+	    <div id="alert-2" class="alert alert-success ocultar" data-dismiss="alert" role="alert">
+	      {{text2}}
+	    </div>
+      </div>
+    </div>
+  </section>

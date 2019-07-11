@@ -1,0 +1,18 @@
+<div class="row">
+ <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Email</th>
+      <th scope="col">Tipo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of usuarios">
+      <td>{{item.nombre}} {{item.apellido}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.tipo}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

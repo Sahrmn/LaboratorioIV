@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<!-- Portfolio Grid Section -->
+  <app-alta-materias></app-alta-materias>
+
+  <app-lista-materias [modo]="'admin'"></app-lista-materias>
+
+
+<section class="portfolio" id="portfolio">
+	<div class="container">
+	  <h2 class="text-center text-uppercase text-secondary mb-0">Lista de Usuarios</h2>
+	  <hr class="star-dark mb-5">
+	  	<app-buscar-usuarios (myOutPut)="seleccionarTipo($event)"></app-buscar-usuarios>
+		<app-lista-usuarios [myTipo]="tipo"></app-lista-usuarios>
+	</div>
+</section>

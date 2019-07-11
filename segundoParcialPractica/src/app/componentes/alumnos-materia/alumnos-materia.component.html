@@ -1,0 +1,33 @@
+<section class="bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-white">Alumnos Inscriptos en Materias</h2>
+      <hr class="star-light mb-5">
+      <div class="row mb">
+      	<div class="col"></div>
+      	<div class="col">
+	        <label for="exampleFormControlInput1">Materia: </label>
+	        <select [(ngModel)]="materia" (ngModelChange)="seleccionMateria()" name="materia" class="form-control" id="materiaSelect">
+		      <option *ngFor="let item of materias" value="{{item.nombre}}">{{item.nombre}}</option>
+		    </select>
+      	</div>
+  	    <div class="col"></div>
+        </div>
+        <div class="row">
+          <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Cuatrimestre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of inscripcionAlumno">
+              <td>{{item.nombreAlumno}} {{item.apellidoAlumno}}</td>
+              <td>{{item.cuatrimestre}}</td>
+            </tr>
+            <tr *ngIf="inscripcionAlumno.length == 0">No hay alumnos inscriptos</tr>
+          </tbody>
+        </table>
+        </div>
+    </div>
+</section>

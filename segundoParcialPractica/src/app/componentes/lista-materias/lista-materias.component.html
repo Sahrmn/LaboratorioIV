@@ -1,0 +1,51 @@
+<section *ngIf="modo == 'admin'" class="bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-white">Materias</h2>
+      <hr class="star-light mb-5">
+      <div class="row">
+        <table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Cupo</th>
+		      <th scope="col">Cuatrimestre</th>
+		      <th scope="col">Profesor</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr *ngFor="let item of materias">
+		      <td>{{item.nombre}}</td>
+		      <td>{{item.cupo}}</td>
+		      <td>{{item.cuatrimestre}}</td>
+		      <td>{{item.nombreProfesor}} {{item.apellidoProfesor}}</td>
+		    </tr>
+		  </tbody>
+		</table>
+      </div>
+    </div>
+  </section>
+
+  <section *ngIf="modo == 'profesor'" class="bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-white">Materias</h2>
+      <hr class="star-light mb-5">
+      <div class="row">
+        <table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Cupo</th>
+		      <th scope="col">Cuatrimestre</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr *ngFor="let item of materias">
+		      <td>{{item.nombre}}</td>
+		      <td>{{item.cupo}}</td>
+		      <td>{{item.cuatrimestre}}</td>
+		    </tr>
+		  </tbody>
+		</table>
+      </div>
+    </div>
+  </section>

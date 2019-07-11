@@ -1,0 +1,9 @@
+<div class="row">
+	<label for="exampleFormControlInput1">Filtrar por Tipo</label>
+	<select [(ngModel)]="tipo" (ngModelChange)="seleccionTipo()" name="tipo" class="form-control" id="tipoSelect">
+	  <option value="todos">Todos</option>
+	  <option value="alumno">Alumno</option>
+	  <option value="profesor">Profesor</option>
+	  <option value="administrador">Administrador</option>
+	</select>
+</div>
